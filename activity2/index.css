@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+/* navigation bar */
+
+.nav-bar {
+    /* display: flex;
+    justify-content: center; */
+    background-color: #333;
+    list-style: none;
+    align-items:start;
+    justify-items: center;
+    overflow: hidden;
+}
+
+.nav-bar h1 {
+    color: azure;
+}
+
+/* main */
+
+.makeCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.heightContainer {
+    height: 80vh;
+}
+
+.card-design {
+    box-shadow: 5px 10px #c2c0c0;
+}
+
+/* button {
+    color: white;
+    font-weight: bold;
+    background-color: #2e2b2c;
+    border-radius: 25px;
+    font-size: 1rem;
+    padding: 1rem;
+} */
+
+input {
+    border-radius: 5px;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.transactionContainer {
+    height: 450px;
+}

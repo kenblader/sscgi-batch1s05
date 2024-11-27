@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasaLoad</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="container-fluid nav-bar">
+        <div class="row align-items-start">
+            <h1 class="p-4">Welcome to PasaLoad!</h1>
+            <!-- <div class="nav col p-4 ms-3 me-3"><a href="#bio">Intro</a></div>
+            <div class="nav col p-4 ms-3 me-3"><a href="#project-info">Projects</a></div>
+            <div class="nav col p-4 ms-3 me-3"><a href="#pre-footer">Skills</a></div>
+            <div class="nav col p-4 ms-3 me-3"><a href="#pre-footer">Contacts</a></div> -->
+        </div>
+    </nav>
+    <main>
+        <div id="loginContainer" class="container">
+            <div class="row makeCenter heightContainer">
+                <div class="col"></div>
+                <div class="card col p-5 makeCenter card-design">
+                    <form>
+                        <div >
+                            <h2 class="textCenter">Log in your Mobile Number</h2>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="mobileNo">Mobile No. :</label>
+                                    <input type="number" name="mobileNo" id="mobileNo" class="m-3">
+                                </div>
+                            </div>
+                            <!-- <div class="row">
+                                <div class="col">
+                                    <label for="amountAvail">Available Amount :</label>
+                                    <input type="number" name="amountAvail" id="amountAvail">
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="w-100 makeCenter">
+                            <button type="button" id="loginBtn" class="m-3 btn btn-primary">Log In</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col"></div> 
+            </div>
+        </div>
+
+        <div id="pasaLoadForm" class="container">
+            <div class="row makeCenter heightContainer">
+                <div class="col"></div>
+                <div class="card col p-5 makeCenter card-design me-3">
+                    <form>
+                        <div >
+                            <h2>What to do, <span id="mobileNumber"></span>?</h2>
+                            <div class="row">
+                                <div class="col">
+                                    <p for="amountAvailable" class="m-2">Available Amount: <span id="amountAvailable">0</span></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="mobileNumToSend">Mobile No. : </label>
+                                    <input type="number" id="mobileNumToSend" class="m-2"><br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="amountToSend">Amount: </label>
+                                    <input type="number" id="amountToSend" class="m-2"><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100 makeCenter">
+                            <button type="button" id="addLoad" class="btn btn-primary">Add Load</button>
+                            <button type="button" id="submitBtn" class="m-3 btn btn-primary">Send</button>
+                        </div>
+                        <div class="w-100 makeCenter">
+                            <button type="button" id="logoutBtn" class="m-3 btn btn-danger">Log out</button>
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="card col p-5 card-design transactionContainer">
+                    <form>
+                        <div >
+                            <h2 class="align-items-start">Transaction History</h2>
+                            <div class="row">
+                                <div id="historyList"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div> 
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="addAmountContainer" class="modal fade " role="dialog" tabindex="-1">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div id="block1">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Is this you?</h2>
+                            <button type="button" class="btn btn-danger close" data-dismiss="modal" id="closeBtn">&times;</button>
+                        </div>
+                        <div class="modal-body makeCenter">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="number" id="otpValidation" class="m-3">
+                                    <p>OTP was sent to your mobile number. 
+                                        <span><button class="btn btn-default" id="resendOTP"><a href="#">Resend OTP</a></button></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="otpBtn">Ok</button>
+                        </div>
+                    </div>
+                    <div id="block2">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Add your Load Now</h2>
+                            <button type="button" class="btn btn-danger close" data-dismiss="modal" id="closeBtn">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="amountToAdd">Add Amount: </label>
+                                    <input type="number" id="amountToAdd" class="m-3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="submitAddBtn">Ok</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
