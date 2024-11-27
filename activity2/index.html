@@ -21,6 +21,7 @@
         </div>
     </nav>
     <main>
+        <!-- log in -->
         <div id="loginContainer" class="container">
             <div class="row makeCenter heightContainer">
                 <div class="col"></div>
@@ -30,19 +31,17 @@
                             <h2 class="textCenter">Log in your Mobile Number</h2>
                             <div class="row">
                                 <div class="col">
-                                    <label for="mobileNo">Mobile No. :</label>
-                                    <input type="number" name="mobileNo" id="mobileNo" class="m-3">
+                                    <label for="loginMobileNo">Mobile No. :</label>
+                                    <input type="number" name="mobileNo" id="loginMobileNo" class="m-3">
                                 </div>
                             </div>
-                            <!-- <div class="row">
-                                <div class="col">
-                                    <label for="amountAvail">Available Amount :</label>
-                                    <input type="number" name="amountAvail" id="amountAvail">
-                                </div>
-                            </div> -->
+                            <!-- <p>Don't have an account? 
+                                <span><button class="btn btn-default" id="signUp"><a href="#">Sign up</a></button></span>
+                            </p> -->
                         </div>
                         <div class="w-100 makeCenter">
-                            <button type="button" id="loginBtn" class="m-3 btn btn-primary">Log In</button>
+                            <!-- <button type="button" id="loginBtn" class="m-3 btn btn-primary">Log In</button> -->
+                            <button type="button" id="loginBtn" class="m-3 buttonDesign">Log In</button>
                         </div>
                     </form>
                 </div>
@@ -50,6 +49,31 @@
             </div>
         </div>
 
+        <!-- sign up -->
+        <!-- <div id="registerContainer" class="container">
+            <div class="row makeCenter heightContainer">
+                <div class="col"></div>
+                <div class="card col p-5 makeCenter card-design">
+                    <form>
+                        <div >
+                            <h2 class="registerMobileNo">Sign Up</h2>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="mobileNo">Mobile No. :</label>
+                                    <input type="number" name="mobileNo" id="registerMobileNo" class="m-3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100 makeCenter">
+                            <button type="button" id="signUpBtn" class="m-3 buttonDesign">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col"></div> 
+            </div>
+        </div> -->
+
+        <!-- main process flow -->
         <div id="pasaLoadForm" class="container">
             <div class="row makeCenter heightContainer">
                 <div class="col"></div>
@@ -76,8 +100,8 @@
                             </div>
                         </div>
                         <div class="w-100 makeCenter">
-                            <button type="button" id="addLoad" class="btn btn-primary">Add Load</button>
-                            <button type="button" id="submitBtn" class="m-3 btn btn-primary">Send</button>
+                            <button type="button" id="addLoad" class="buttonDesign">Add Load</button>
+                            <button type="button" id="submitBtn" class="m-3 buttonDesign">Send</button>
                         </div>
                         <div class="w-100 makeCenter">
                             <button type="button" id="logoutBtn" class="m-3 btn btn-danger">Log out</button>
@@ -119,7 +143,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="otpBtn">Ok</button>
+                            <button type="button" class="buttonDesign" data-dismiss="modal" id="otpBtn">Ok</button>
                         </div>
                     </div>
                     <div id="block2">
@@ -136,7 +160,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="submitAddBtn">Ok</button>
+                            <button type="button" class="buttonDesign" data-dismiss="modal" id="submitAddBtn">Ok</button>
                         </div>
                     </div>
                     
