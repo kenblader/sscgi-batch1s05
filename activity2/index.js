@@ -48,7 +48,7 @@ document.getElementById("loginBtn").addEventListener("click", () => {
 });
 
 document.getElementById("logoutBtn").addEventListener("click", () => {
-  showLogin();
+  location.reload();
 });
 
 document.getElementById('addLoad').addEventListener("click", function() {
@@ -131,12 +131,6 @@ function showAmount() {
 
   modal1.show();
   addAmountSection.style.display = "none";
-}
-
-function showLogin() {
-  form.style.display = "none";
-  loginContainer.style.display = "block";
-  counter = 0;
 }
 
 function validateMobileNumberInput(mobileNo, length) {
